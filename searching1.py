@@ -1,6 +1,6 @@
 # ----------
 # User Instructions:
-# 
+#
 # Define a function, search() that returns a list
 # in the form of [optimal path length, row, col]. For
 # the grid shown below, your function should output
@@ -64,11 +64,11 @@ def expandCell(grid, openList, cell, goal):
     gVal = cell[0]+1
     print(cell)
     expansion = []
-    for x in range(len(delta)):
+    for i in range(len(delta)):
         print("delta x")
-        print(delta[x][0])
+        print(delta[i][0])
         print("delta y")
-        print(delta[x][1])
+        print(delta[i][1])
         print("cell x")
         print(cell[1])
         print("cell y")
@@ -76,7 +76,7 @@ def expandCell(grid, openList, cell, goal):
         x = cell[1] + delta[x][0]
         y = cell[2] + delta[x][1]
         print(x, " ", y)
-        
+
         if(0 <= x < len(grid) and 0 <= y < len(grid[x]) and not inOpenList(openList, x, y) and grid[x][y] != 1):
             expansion.append([gVal, x, y])
     openList.append(expansion)
